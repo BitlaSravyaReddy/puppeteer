@@ -7,7 +7,7 @@ async function highlightLinks(url){
     await page.screenshot({path: 'before.png'});
 
     await page.evaluate(() => {
-        const links = document.querySelectorAll('h1');
+        const links = document.querySelectorAll('a');
         links.forEach(link => {
             link.style.backgroundColor = 'yellow';
             link.style.color = 'red';
